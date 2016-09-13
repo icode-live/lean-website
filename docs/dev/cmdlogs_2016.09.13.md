@@ -1,3 +1,5 @@
+git config --global push.default simple
+
 $ git clone https://github.com/icode-live/lean-website.git
 Cloning into 'lean-website'...
 remote: Counting objects: 4, done.
@@ -24,6 +26,12 @@ Already up-to-date.
 $ git status
 On branch development
 nothing to commit, working directory clean
+
+$ git push --set-upstream origin development
+
+$ git config --global credential.helper cache
+so we only type credential once
+
 
 vim .gitignore
 
@@ -67,6 +75,35 @@ Untracked files:
 	docs/
 
 nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add -A
+(lean-icode) tac@yoshiki ~/Work/icode/lean-website $ git status
+On branch development
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   docs/dev/cmdlogs_2016.09.13.md
+
+$ git commit -m "doc folder for project Design and Technical logs, and my default ignore file"
+[development 6a549af] doc folder for project Design and Technical logs, and my default ignore file
+ 2 files changed, 157 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 docs/dev/cmdlogs_2016.09.13.md
+
+
+$ git push --set-upstream origin development
+Username for 'https://github.com': icode-live
+Password for 'https://icode-live@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 2.23 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/icode-live/lean-website.git
+ * [new branch]      development -> development
+Branch development set up to track remote branch development from origin
+
 
 # lean-website
 
@@ -114,3 +151,5 @@ Successfully installed Django-1.10.1 Mako-1.0.4 Markdown-2.6.6 MarkupSafe-0.23 P
 
 
 ```
+
+
