@@ -148,7 +148,16 @@ Collecting Django==1.10.1 (from -r lean-base.txt (line 1))
 Successfully built django-environ Markdown MarkupSafe django-behave pytest-twisted pytest-bdd pycrypto parse-type sqlparse coverage glob2 Mako
 Installing collected packages: Django, six, django-environ, Markdown, MarkupSafe, ecdsa, pycrypto, paramiko, Pillow, parse, parse-type, behave, selenium, django-behave, sqlparse, django-debug-toolbar, py, pytest, pytest-catchlog, coverage, pytest-cov, pytest-django, decorator, pytest-twisted, glob2, Mako, pytest-bdd
 Successfully installed Django-1.10.1 Mako-1.0.4 Markdown-2.6.6 MarkupSafe-0.23 Pillow-3.3.1 behave-1.2.5 coverage-4.2 decorator-4.0.10 django-behave-0.1.5 django-debug-toolbar-1.5 django-environ-0.4.0 ecdsa-0.13 glob2-0.4.1 paramiko-1.17.2 parse-1.6.6 parse-type-0.3.4 py-1.4.31 pycrypto-2.6.1 pytest-3.0.2 pytest-bdd-2.17.1 pytest-catchlog-1.2.2 pytest-cov-2.3.1 pytest-django-3.0.0 pytest-twisted-1.5 selenium-2.53.6 six-1.10.0 sqlparse-0.2.1
+```
 
+clone djangorestframework and replace == with >= in all requirement files, then
+
+```
+$ pip install -r requirements.txt
+
+Successfully built django-guardian coreapi transifex-client pypandoc itypes mkdocs-bootstrap PyYAML click tornado livereload clint args
+Installing collected packages: django-guardian, django-filter, requests, itypes, uritemplate, coreapi, mkdocs-bootstrap, PyYAML, click, tornado, Jinja2, mkdocs-bootswatch, livereload, mkdocs, pyflakes, mccabe, pycodestyle, flake8, pep8, isort, requests-toolbelt, args, clint, pkginfo, twine, urllib3, transifex-client, pypandoc
+Successfully installed Jinja2-2.8 PyYAML-3.12 args-0.1.0 click-6.6 clint-0.5.1 coreapi-2.0.0 django-filter-0.14.0 django-guardian-1.4.6 flake8-3.0.4 isort-4.2.5 itypes-1.1.0 livereload-2.4.1 mccabe-0.5.2 mkdocs-0.15.3 mkdocs-bootstrap-0.1.1 mkdocs-bootswatch-0.4.0 pep8-1.7.0 pkginfo-1.3.2 pycodestyle-2.0.0 pyflakes-1.2.3 pypandoc-1.2.0 requests-2.11.1 requests-toolbelt-0.7.0 tornado-4.4.1 transifex-client-0.12.2 twine-1.8.1 uritemplate-3.0.0 urllib3-1.17
 
 ```
 
