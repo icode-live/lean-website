@@ -9,13 +9,14 @@ from django.conf import settings
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # unclutter the main project directory
-#sys.path.append(os.path.join(BASE_DIR, 'apps'))
-DEBUG = True 
+# sys.path.append(os.path.join(BASE_DIR, 'apps'))
+
+DEBUG = True
 settings.configure(
-	DEBUG = DEBUG,		#DEBUG=True,
-	DEBUG_TOOLBAR = DEBUG,
-	TEMPLATE_DEBUG = DEBUG,
-        SECRET_KEY='hehehe!@#$', 
+        DEBUG=DEBUG,        # DEBUG=True,
+        DEBUG_TOOLBAR=DEBUG,
+        TEMPLATE_DEBUG=DEBUG,
+        SECRET_KEY=str(os.urandom(32)),  # 'hehehe!@#$',
         ROOT_URLCONF=__name__,
         MIDDLEWARE_CLASSES=(
             'django.middleware.common.CommonMiddleware',
@@ -30,28 +31,28 @@ settings.configure(
         ),
         STATICFILES_DIRS=(
             os.path.join(BASE_DIR, 'static'),
-			os.path.join(BASE_DIR, 'src'),
+            os.path.join(BASE_DIR, 'src'),
         ),
-	DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'dev.db'),
-        }
-	},
-	STATIC_URL ='/static/',
-	STATIC_ROOT =os.path.join(BASE_DIR, 'static_root'), 
-	ADMINS = (
-    		('lean-website:admin', 'admin@admin.com'),
-	),
-    	EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend',
+        DATABASES={
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'dev.db'),
+                }
+        },
+        STATIC_URL='/static/',
+        STATIC_ROOT=os.path.join(BASE_DIR, 'static_root'),
+        ADMINS=(
+            ('lean-website:admin', 'admin@admin.com'),
+        ),
+        EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend',
 )
-
 
 
 ###
 # VIEWS ::..
 ##
 from django.http import HttpResponse
+
 
 def index(request):
     return HttpResponse('Hello World')
@@ -61,10 +62,10 @@ def index(request):
 ##
 from django.conf.urls import url
 
-urlpatterns = (#'',
+
+urlpatterns = (  # '',
         url(r'^$', index, name="homepage"),
 )
-
 
 
 ###
@@ -74,13 +75,14 @@ def test_hello_world():
     assert "hello_world" == "hello_world"
 
 ###
-# MANAGE ::..
+# WSGI ::..
 ##
 from django.core.wsgi import get_wsgi_application
+
 
 application = get_wsgi_application()
 
 if __name__ == "__main__":
     from django.core.management import execute_from_command_line
-    execute_from_command_line(sys.argv)
 
+    execute_from_command_line(sys.argv)
