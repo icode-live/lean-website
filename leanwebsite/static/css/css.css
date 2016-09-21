@@ -1,0 +1,96 @@
+*,html,body{margin:0; padding:0;}
+footer{text-align:right;
+    background-color:rgba(26,0,26,0.9); 
+    color:rgba(155,177,155,0.9);}
+
+a{ text-decoration:none; cursor: pointer; color:rgba(155, 175, 155, 0.8);}
+
+hr{border:1px solid rgba(105, 0, 105, 0.9);}
+
+
+blockquote {
+  background: #f9f9f9;
+font-style: italic;
+  border-left: 4px solid #ccc;
+/*  margin: 1.5em 10px;*/
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 2.5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+blockquote cite {
+color: #999999;
+display: block;
+margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+
+#stage {
+        /*position:relative;top:50%;left:50%;
+        transform:translate(-50%,-50%);*/
+        background-color:rgba(103, 0, 103, 0.9);
+
+}       /*#660066*/
+
+#cnv   {
+    margin:0 auto;
+    display:block;
+    font-family: 'Nunito', sans-serif; 
+    background-color:rgba(153, 0, 153, 0.9);
+    top:136px;
+}       /*#990099;}*/
+
+nav {
+    position:fixed;
+    z-index: 9999; 
+    top:0px;
+    left:0px;
+    display:block; 
+    width:100%;
+    height:36px;
+    background-color:rgba(26,0,26,0.9); 
+    color:rgba(155,177,155,0.9);
+}
+
+.le {color:rgba(244,79,180,0.9); } /*   #f44fb4; */
+.ri {color:rgba(138,91,160,0.9); } /*  #8a5ba0; }*/
+.na {color:rgba(91,123,235,0.9); } /*   #5b7beb; }*/
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('../font/Nunito-Regular.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('../font/Nunito-Bold.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('../font/Nunito-Light.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+
+}
+

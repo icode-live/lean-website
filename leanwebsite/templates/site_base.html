@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>razafy.com</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css" -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+  <link rel="stylesheet" href="{% static 'css/css.css' %}">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
+<script>
+function goToAnchor(anchor) {
+  var loc = document.location.toString().split('#')[0];
+  document.location = loc + '#' + anchor;
+  return false;
+}
+</script>
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<nav>
+  <a href="http://razafy.com"><img src="{% static 'favicon.ico' %}"></a>&nbsp;
+  <a href="/code/">iC0oDE</a> |
+  <a href="#iWrite" onclick="goToAnchor('iWrite')">iWRITE</a> |
+  <a href="/rindra/">iPLAY</a> |
+  <a href="/nirina/">Video making</a>
+</nav> 
+
+{% block content %}{% endblock content %}
+
+<footer>
+<a href="http://razafy.com" target="_blank">made by &nbsp;<span class="le">le</span><span class="ri">ri</span><span class="na">na</span> 
+&nbsp;^_^&nbsp;
+</a>
+</footer>
+      
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
